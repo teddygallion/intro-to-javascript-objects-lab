@@ -197,21 +197,15 @@ Solve Exercise 21 here:
 
 function generateArrayOfTypes(pokemon){
 	let types ={}
-	let setOfTypes = new Set();
-	for(let x in pokemon){
-		let type = pokemon[x].type;
-		setOfTypes.add(type)
-	}
-	for (let type of setOfTypes){
-		types[type] = []
-	}
-	for(let item in pokemon){
-		for(let type in types){
-			if(pokemon[item].type === type){
-				types[type].push(pokemon[item]);
-			}
-		}
-	}
-	console.log(types)
+	 pokemon.forEach(pokemonItem => {
+    const { type } = pokemonItem;
+    if (!types[type]) {
+      types[type] = [];
+    }
+    types[type].push(pokemonItem);
+  });
+
+	console.log(types['grass'])
 }
+
 generateArrayOfTypes(pokemon)
