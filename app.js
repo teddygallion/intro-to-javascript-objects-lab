@@ -399,4 +399,4 @@ completed: 5 | incomplete: 3
 }
 
 */
-
+module.exports = game;

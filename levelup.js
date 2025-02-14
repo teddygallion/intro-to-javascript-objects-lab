@@ -1,4 +1,5 @@
 const pokemon = require('./data.js')
+const game = require('./app.js')
 
 
 		// 				LEVEL UP exercises
